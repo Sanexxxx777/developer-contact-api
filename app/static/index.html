@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+      content="Backend developer portfolio and AI-assisted contact form" />
+    <title>Alexander Shulgin — Backend Developer</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <header class="nav shell">
+      <a class="brand" href="#top"
+        aria-label="Home"><span>AM</span> / backend</a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+        <a class="api-link" href="/docs">API docs ↗</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="eyebrow"><i></i> Backend developer portfolio</div>
+        <h1>I build backends that stay <em>predictable</em> under pressure.</h1>
+        <p class="lead">
+          Python developer focused on explicit API contracts, resilient integrations, and systems
+          whose failure modes are tested before deployment.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#contact">Start a conversation</a>
+          <a class="button secondary" href="/api/health">Check API health</a>
+        </div>
+        <dl class="stats" aria-label="Key experience">
+          <div>
+            <dt>3</dt>
+            <dd>documented API routes</dd>
+          </div>
+          <div>
+            <dt>14</dt>
+            <dd>automated tests</dd>
+          </div>
+          <div>
+            <dt>0</dt>
+            <dd>secrets in the repository</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="work" class="work shell">
+        <div class="section-heading">
+          <p>Selected capabilities</p>
+          <h2>Small surface area.<br />Serious engineering.</h2>
+        </div>
+        <div class="capability-grid">
+          <article>
+            <span>01</span><h3>API architecture</h3>
+            <p>Versioned REST interfaces with strict schemas, observable failures, and useful documentation.</p>
+          </article>
+          <article>
+            <span>02</span><h3>AI integrations</h3>
+            <p>Structured model outputs, bounded latency, and fallbacks designed into the happy path.</p>
+          </article>
+          <article>
+            <span>03</span><h3>Reliable delivery</h3>
+            <p>Testable services, durable persistence, rate limiting, and explicit configuration.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact shell">
+        <div class="contact-copy">
+          <p class="kicker">Have a problem worth solving?</p>
+          <h2>Let’s build it<br /><em>to fail safely.</em></h2>
+          <p>Your message is classified by AI and safely falls back to standard processing if the provider is unavailable.</p>
+        </div>
+        <form id="contact-form" novalidate>
+          <div class="field-row">
+            <label>Name<input name="name" autocomplete="name" minlength="2" maxlength="80" required /></label>
+            <label>Phone<input name="phone" autocomplete="tel" minlength="7" maxlength="24" required /></label>
+          </div>
+          <label>Email<input name="email" type="email" autocomplete="email" required /></label>
+          <label>What can I help with?<textarea name="comment" rows="5" minlength="10" maxlength="3000" required></textarea></label>
+          <div class="form-footer">
+            <p id="form-status" role="status" aria-live="polite"></p>
+            <button class="button primary"
+              type="submit">Send message <span>→</span></button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <p>© 2026 Alexander Shulgin</p>
+      <p>FastAPI / SQLite / OpenAI</p>
+    </footer>
+  </body>
+</html>
